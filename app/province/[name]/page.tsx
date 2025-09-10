@@ -2,7 +2,6 @@
 
 import { readProvinceByName } from "@/src/actions";
 import { TNgola, TProvinceParams } from "@/src/types";
-import type { PageProps } from "next";
 import Image from "next/image";
 import React from "react";
 import {
@@ -18,7 +17,7 @@ import Municipe from "@/src/components/Municipe";
 export default function Page({
   params,
 }: {
-  params: PageProps<TProvinceParams>;
+  params: TProvinceParams;
 }) {
   const [resData, setResData] = React.useState<Array<TNgola>>([]);
   const [resError, setResError] = React.useState<string>("");
