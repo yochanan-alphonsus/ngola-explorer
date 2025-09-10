@@ -1,5 +1,3 @@
-"use client";
-
 import { readProvinceByName } from "@/src/actions";
 import { TNgola, TProvinceParams } from "@/src/types";
 import Image from "next/image";
@@ -14,11 +12,18 @@ import {
 } from "@/src/components";
 import Municipe from "@/src/components/Municipe";
 
-interface ProvincePageProps {
-  params: TProvinceParams;
-}
 
-export default function Page({params}: ProvincePageProps) {
+export default async function Page({params}: { params: TProvinceParams }) {
+  const formData = new FormData();
+  formData.append("name", decodeURIComponent(params.name));
+
+  const resData = (await readProvinceByName(formData)) as TNgola[];
+
+  if (!resData || resData.length === 0) {
+    return <NotFound />;
+  }
+  
+  /*
   const [resData, setResData] = React.useState<Array<TNgola>>([]);
   const [resError, setResError] = React.useState<string>("");
 
@@ -31,6 +36,7 @@ export default function Page({params}: ProvincePageProps) {
       .then((data) => setResData(data))
       .catch((err) => setResError(err));
   }, [params.name]);
+  */
 
   return (
     <>
