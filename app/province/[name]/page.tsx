@@ -12,7 +12,7 @@ import PlacesToVisit from "@/src/components/PlacesToVisit";
 import Municipe from "@/src/components/Municipe";
 
 export default async function Page({ params }: { params: Promise<{ name: string }> }) {
-  const name = (await params).id
+  const name = (await params).name
   const formData = new FormData();
   formData.append("name", decodeURIComponent(name));
 
