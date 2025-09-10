@@ -11,14 +11,7 @@ import PlacesToStay from "@/src/components/PlacesToStay";
 import PlacesToVisit from "@/src/components/PlacesToVisit";
 import Municipe from "@/src/components/Municipe";
 
-export type TProvinceParams = {
-  name: string;
-};
-
-interface ProvincePageProps {
-  params: TProvinceParams;
-}
-export default async function Page({ params }: ProvincePageProps) {
+export default async function Page({ params }: { params: Record<string, string> }) {
   const formData = new FormData();
   formData.append("name", decodeURIComponent(params.name));
 
