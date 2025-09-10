@@ -15,7 +15,10 @@ export type TProvinceParams = {
   name: string;
 };
 
-export default async function Page({ params }: { params: TProvinceParams }) {
+interface ProvincePageProps {
+  params: TProvinceParams;
+}
+export default async function Page({ params }: ProvincePageProps) {
   const formData = new FormData();
   formData.append("name", decodeURIComponent(params.name));
 
