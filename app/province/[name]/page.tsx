@@ -6,10 +6,11 @@ import {
   Geography,
   History,
   NotFound,
-  PlacesToEat,
-  PlacesToStay,
-  PlacesToVisit,
 } from "@/src/components";
+import PlacesToEat from "@/src/components/PlacesToEat";
+import PlacesToStay from "@/src/components/PlacesToStay";
+import PlacesToVisit from "@/src/components/PlacesToVisit";
+
 import Municipe from "@/src/components/Municipe";
 
 
