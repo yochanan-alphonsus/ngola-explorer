@@ -11,9 +11,10 @@ import PlacesToStay from "@/src/components/PlacesToStay";
 import PlacesToVisit from "@/src/components/PlacesToVisit";
 import Municipe from "@/src/components/Municipe";
 
-export default async function Page({ params }: { params: Record<string, string> }) {
+export default async function Page({ params }: { params: Promise<{ name: string }> }) {
+  const name = (await params).id
   const formData = new FormData();
-  formData.append("name", decodeURIComponent(params.name));
+  formData.append("name", decodeURIComponent(name));
 
   let resData: TNgola[] = [];
 
