@@ -17,21 +17,20 @@ import Municipe from "@/src/components/Municipe";
 export default function Page({
   params,
 }: {
-  params: <TProvinceParams>;
+  params: TProvinceParams;
 }) {
-  const param = React.use<TProvinceParams>(params);
   const [resData, setResData] = React.useState<Array<TNgola>>([]);
   const [resError, setResError] = React.useState<string>("");
 
   React.useEffect(() => {
     // Fetching province by name parameter
     const formData = new FormData();
-    formData.append("name", decodeURIComponent(param.name));
+    formData.append("name", decodeURIComponent(params.name));
     readProvinceByName(formData)
       //@ts-ignore
       .then((data) => setResData(data))
       .catch((err) => setResError(err));
-  }, [param.name]);
+  }, [params.name]);
 
   return (
     <>
