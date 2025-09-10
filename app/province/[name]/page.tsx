@@ -14,11 +14,11 @@ import {
 } from "@/src/components";
 import Municipe from "@/src/components/Municipe";
 
-export default function Page({
-  params,
-}: {
+interface ProvincePageProps {
   params: TProvinceParams;
-}) {
+}
+
+export default function Page({params}: ProvincePageProps) {
   const [resData, setResData] = React.useState<Array<TNgola>>([]);
   const [resError, setResError] = React.useState<string>("");
 
