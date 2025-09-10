@@ -1,0 +1,36 @@
+{
+  "name": "ngola-explorer",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@heroicons/react": "^2.2.0",
+    "@prisma/client": "^6.2.1",
+    "@tailwindcss/postcss": "^4.1.10",
+    "emailjs": "^4.0.3",
+    "emailjs-com": "^3.2.0",
+    "framer-motion": "^12.18.1",
+    "next": "^15.3.4",
+    "nodemailer": "^7.0.3",
+    "postcss": "^8.5.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "resend": "^4.6.0",
+    "swiper": "^11.2.8",
+    "tailwindcss": "^4.1.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/nodemailer": "^6.4.17",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "prisma": "^6.2.1",
+    "typescript": "^5"
+  }
+}
