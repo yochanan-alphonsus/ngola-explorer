@@ -1,7 +1,8 @@
 "use client";
 
 import { readAllProvinces, readAllProvincesByName } from "@/src/actions";
-import { NotFound, ProvinceCard } from "@/src/components";
+import { NotFound } from "@/src/components";
+import ProvinceCard from "@/src/components/ProvinceCard";
 import { TNgola } from "@/src/types";
 import React from "react";
 
