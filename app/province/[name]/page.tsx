@@ -1,5 +1,5 @@
 import { readProvinceByName } from "@/src/actions";
-import { TNgola, TProvinceParams } from "@/src/types";
+import { TNgola } from "@/src/types";
 import Image from "next/image";
 import {
   Geography,
@@ -10,6 +10,10 @@ import PlacesToEat from "@/src/components/PlacesToEat";
 import PlacesToStay from "@/src/components/PlacesToStay";
 import PlacesToVisit from "@/src/components/PlacesToVisit";
 import Municipe from "@/src/components/Municipe";
+
+export type TProvinceParams = {
+  name: string;
+};
 
 export default async function Page({ params }: { params: TProvinceParams }) {
   const formData = new FormData();
