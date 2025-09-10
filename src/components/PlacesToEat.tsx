@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { TNgola } from "../types";
 import Image from "next/image";
