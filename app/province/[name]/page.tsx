@@ -17,7 +17,7 @@ import Municipe from "@/src/components/Municipe";
 export default function Page({
   params,
 }: {
-  params: React.Usable<TProvinceParams>;
+  params: <TProvinceParams>;
 }) {
   const param = React.use<TProvinceParams>(params);
   const [resData, setResData] = React.useState<Array<TNgola>>([]);
