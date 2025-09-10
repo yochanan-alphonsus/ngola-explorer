@@ -1,3 +1,5 @@
+"use client";
+
 import { TNgola } from "../types";
 import Image from "next/image";
 import { motion } from "framer-motion";
