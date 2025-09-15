@@ -21,7 +21,6 @@ export default async function Page({ params }: { params: Promise<{ name: string 
   try {
     resData = (await readProvinceByName(formData)) as TNgola[];
   } catch (error) {
-    // In server components, you can throw to trigger the error boundary
     return (
       <div className="w-full h-screen flex flex-col justify-center items-center font-medium flex-wrap">
         <span className="text-center text-sm md:text-lg">
